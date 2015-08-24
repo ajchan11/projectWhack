@@ -1,0 +1,19 @@
+body {
+	text-align: center;
+	font-size: 30px;
+	font-style: serif;
+}
+
+.container {
+	width:450px;
+	margin: 0 auto;
+}
+
+
+.box {
+	height:100px;
+	width:100px;
+	background-color: red;
+	display:inline-block;
+	border-radius: 10px;
+}
