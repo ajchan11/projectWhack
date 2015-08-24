@@ -1,20 +1,33 @@
-var turnCount = 0;
-var boxes = document.querySelectorAll(".box");
-var button = document.querySelector("button")
-var turns = document.querySelectorAll(".h1")
+var boxes = $(".picX")
 
-console.log(boxes);
+var time = Math.floor(Math.random() * 1000);
+console.log(time)
 
-for(var i = 0; i < boxes.length; i++){
-	boxes[i].addEventListener("click", takeTurn)
+setInterval(swap, time)
+var pick =0 ;
+
+var random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
+console.log(random.hasClass("picX"))
+
+function swap () {
+	if(random.hasClass("active")){
+		console.log("has class active")
+		random.removeClass("active")
+		time = Math.floor(Math.random() * 1000);
+		console.log(time)
+		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
+console.log(random.hasClass("picX"))
+
+	} else {
+		random.addClass("active");
+		console.log("running swap()")
+		time = Math.floor(Math.random() * 1000);
+		console.log(time)
+		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
+console.log(random.hasClass("picX"))
+	}
 }
 
-function takeTurn(){
-	if(!this.innerHTML){
-		if(turnCount % 2 === 0){
-			this.innerHTML = "X";
-		} else {
-			this.innerHTML = "O";
-		}
-		turnCount++;
-	}
+
+
+

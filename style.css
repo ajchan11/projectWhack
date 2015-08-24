@@ -10,14 +10,22 @@ body {
 }
 
 
-.box {
+.picX {
 	height:100px;
 	width:100px;
-	background-color: red;
 	display:inline-block;
 	border-radius: 10px;
+	background-image: url(x.png);
 }
 
+/*.picO {
+	height:100px;
+	width:100px;
+	display:inline-block;
+	border-radius: 10px;
+	background-image: url(o.png);
+}
+*/
 .score {
 	height:100px;
 	width:200px;
@@ -25,4 +33,12 @@ body {
 	border-top: 20px;
 	float: right;
 	display: inline-block;
+}
+
+.active {
+	height:100px;
+	width:100px;
+	display:inline-block;
+	border-radius: 10px;
+	background-image: url(o.png);
 }
