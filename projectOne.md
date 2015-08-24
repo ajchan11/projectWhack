@@ -10,5 +10,6 @@
 3. Game will keep track of score and will change in speed depending on difficulty (and score if I figure out how to do that).
 
 4. User Stories 
+  1. Ordered-sub-list
 
 
