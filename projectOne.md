@@ -4,5 +4,5 @@
 2. Second ordered list item
 
 
-https://github.com/ajchan11/projectOne/blob/master/Screen%20Shot%202015-08-23%20at%2010.23.50%20PM.png
+!(https://github.com/ajchan11/projectOne/blob/master/Screen%20Shot%202015-08-23%20at%2010.23.50%20PM.png)
 
