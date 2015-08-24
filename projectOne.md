@@ -1,11 +1,10 @@
 # Project 1: Whack a Mole!
 
-1. Name of the game: Whack a Mole
-2. Objective: Whack as many moles as quickly as possible within a given time limit.
-
-
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/wireFrame1.png)
 
+1. Name of the game: Whack a Mole
+
+2. Objective: Whack as many moles as quickly as possible within a given time limit.
 
 3. Game will have boxes flip around to reveal different images that the player will click to accumulate points. 
 
