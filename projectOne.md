@@ -4,7 +4,7 @@
 2. Object: Whack as many moles as quickly as possible within a given time limit.
 
 
-![alt tag](https://github.com/ajchan11/projectOne/blob/master/wireFrame.png)
+![alt tag](https://github.com/ajchan11/projectOne/blob/master/wireFrame1.png)
 
 
 3. Game will keep track of score and will change in speed depending on difficulty (and score if I figure out how to do that).
