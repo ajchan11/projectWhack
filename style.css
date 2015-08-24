@@ -41,4 +41,6 @@ body {
 	display:inline-block;
 	border-radius: 10px;
 	background-image: url(o.png);
+	opacity: 0;
+
 }
