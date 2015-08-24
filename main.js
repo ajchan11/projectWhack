@@ -1,10 +1,9 @@
 var boxes = $(".picX");
 var active = $(".active");
 var display= 0;
-var score = 0;
-$(".score").html(display);
+
 console.log(display)
-$(".score").html("Score:" + display);
+$(".score").html("Score: " + display);
 
 // var time = (Math.floor(Math.random() * 1000));
 var time = 1000;
@@ -44,17 +43,17 @@ function swap ()
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
 	}
-
-		$(".active").click(function(){
-			console.log("Yay, click");
-			$(this).removeClass("active").animate
-			({
-			opacity:1
-			})
-			$(this).addClass("picX")
-		display++;
-		console.log(display)
-});
 }
 
+
+$("body").on("click", ".active", function(){
+	console.log("Yay, click");
+	$(this).removeClass("active").animate({
+		opacity:1
+	})
+	$(this).addClass("picX")
+	display++;
+	$(".score").html("Score: " + display);
+	console.log(display)
+});
 
