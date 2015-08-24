@@ -4,5 +4,5 @@
 2. Second ordered list item
 
 
-!(https://github.com/ajchan11/projectOne/blob/master/wireFrame.png)
+![alt tag](https://github.com/ajchan11/projectOne/blob/master/wireFrame.png)
 
