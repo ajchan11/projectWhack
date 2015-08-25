@@ -57,3 +57,8 @@ $("body").on("click", ".active", function(){
 	console.log(display)
 });
 
+$("body").on("click", ".active", function(){
+	console.log("YOU LOSE");
+});
+
+
