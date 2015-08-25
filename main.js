@@ -45,6 +45,15 @@ function swap ()
 	}
 }
 
+$("body").on("click", function(){
+	console.log("Yay, click");
+	var _this = $(this);
+	_this.addClass("clicky");
+	setTimeout( function () {
+		_this.removeClass('clicky')
+	}, 100);
+})
+
 
 $("body").on("click", ".active", function(){
 	console.log("Yay, click");
