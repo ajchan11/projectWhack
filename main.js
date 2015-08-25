@@ -1,17 +1,16 @@
 var boxes = $(".picX");
 var active = $(".active");
 var display= 0;
-var Timer;
-var totalSeconds;
+
 
 console.log(display)
 $(".score").html("Score: " + display);
 
-// var gameTime = (Math.floor(Math.random() * 1000));
-var gameTime = 500;
-console.log(gameTime)
 
-setInterval(swap, gameTime)
+var gameTime = 500;
+
+
+var refresh = setInterval(swap, gameTime)
 var pick =0 ;
 
 var random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
@@ -27,19 +26,13 @@ function swap ()
 		{
 		console.log("has class active")
 		random.removeClass("active")
-			
-		gameTime = (Math.floor(Math.random() * 500));
-		console.log(gameTime)
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
 
 
 	} else {
-		random.addClass("active")
-			;
+		random.addClass("active");
 		console.log("running swap()")
-		gameTime = (Math.floor(Math.random() * 500));
-		console.log(gameTime)
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
 	}
@@ -69,26 +62,24 @@ $("body").on("click", ".active", function(){
 });
 
 
-// window.setTimeout("Tick()", 1000);
-// function Tick() {
-// 	function Tick()
-// 	window.setTimeout("Tick()",1000);
-// }
+var s=5
+var q
+quizCount()
+function quizCount()
+{
+$(".timer").html(s+" seconds remaining")
+s=s-1
+q=setTimeout("quizCount()", 1000)
+if (s<1)
+{
+gameStop();
+}}
 
-// function createTimer(timerID,Time) {
-// 	Timer = document.getElementById(timerID);
-// 	totalSeconds = timing;
-// 	updateTimer()
-// 	window.setTimeout("Tick()",1000);
-// }
-// function Tick() {
-// 	totalSeconds -=1;
-// 	updateTimer()
-// 	window.setTimeout("Tick()", 1000);
-// }
-
-// function updateTimer() {
-// 	fullTimer.innerHTML = totalSeconds;
-// }
-
-
+function gameStop()
+{
+	clearInterval(refresh);
+	clearTimeout(q)
+	console.log("game over")
+	$(".active").removeClass("active")
+$(".timer").html("Time Was Finished")
+}
