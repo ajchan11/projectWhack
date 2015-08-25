@@ -6,7 +6,7 @@ console.log(display)
 $(".score").html("Score: " + display);
 
 // var time = (Math.floor(Math.random() * 1000));
-var time = 1000;
+var time = 100;
 console.log(time)
 
 setInterval(swap, time)
@@ -14,6 +14,8 @@ var pick =0 ;
 
 var random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 console.log(random.hasClass("picX"))
+
+
 
 
 
@@ -26,7 +28,7 @@ function swap ()
 			({
 				opacity:1
 			})
-		time = (Math.floor(Math.random() * 1000));
+		time = (Math.floor(Math.random() * 500));
 		console.log(time)
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
@@ -38,7 +40,7 @@ function swap ()
 				opacity:1
 			});
 		console.log("running swap()")
-		time = (Math.floor(Math.random() * 1000));
+		time = (Math.floor(Math.random() * 500));
 		console.log(time)
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))

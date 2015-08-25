@@ -2,6 +2,8 @@ body {
 	text-align: center;
 	font-size: 30px;
 	font-style: serif;
+	background-image: url(map.png);
+	background-size:cover;
 }
 
 .container {
@@ -22,23 +24,14 @@ body {
 }
 
 .timer {
-	height:100px;
-	width:200px;
-	border-radius: 20px;
 	text-align: center;
-	background-color: orange;
 	border-top: 20px;
 	float: left;
 	display: inline-block;
 }
 
 .score {
-	height:100px;
-	width:200px;
-	border-radius: 20px;
 	text-align: center;
-	background-color: blue;
-	border-top: 20px;
 	float: right;
 	display: inline-block;
 }
@@ -48,7 +41,7 @@ body {
 	width:100px;
 	display:inline-block;
 	border-radius: 10px;
-	background-image: url(o.png);
+	background-image: url(kim.png);
 	opacity: 0;
 
 }
