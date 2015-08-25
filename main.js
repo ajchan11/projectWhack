@@ -1,23 +1,35 @@
 var boxes = $(".picX");
 var active = $(".active");
 var display= 0;
+var s=5
+var q
+var quickStop = setInterval(swap, 1000000)
+var pick =0 ;
+var random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
+console.log(random.hasClass("picX"))
 
 
 console.log(display)
 $(".score").html("Score: " + display);
 
 
-var gameTime = 500;
+function easy() {
+	setInterval(swap,1000);
+	gameCount()
+	quickStop = setInterval(swap, 1000000)
+}
 
+function medium() {
+	setInterval(swap,500);
+	gameCount()
+	quickStop = setInterval(swap, 1000000)
+}
 
-var refresh = setInterval(swap, gameTime)
-var pick =0 ;
-
-var random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
-console.log(random.hasClass("picX"))
-
-
-
+function hard() {
+	setInterval(swap,50);
+	gameCount()
+	quickStop = setInterval(swap, 1000000)
+}
 
 
 function swap () 
@@ -57,27 +69,20 @@ $("body").on("click", ".active", function(){
 	console.log(display)
 });
 
-$("body").on("click", ".active", function(){
-	console.log("YOU LOSE");
-});
-
-
-var s=5
-var q
-quizCount()
-function quizCount()
-{
-$(".timer").html(s+" seconds remaining")
-s=s-1
-q=setTimeout("quizCount()", 1000)
-if (s<1)
-{
-gameStop();
-}}
+function gameCount()
+	{
+		$(".timer").html(s+" seconds remaining")
+		s=s-1
+		q=setTimeout("gameCount()", 1000)
+	if (s<1)
+	{
+		gameStop();
+	}
+}
 
 function gameStop()
 {
-	clearInterval(refresh);
+	clearInterval(quickStop);
 	clearTimeout(q)
 	console.log("game over")
 	$(".active").removeClass("active")
