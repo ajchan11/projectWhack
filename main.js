@@ -1,15 +1,17 @@
 var boxes = $(".picX");
 var active = $(".active");
 var display= 0;
+var Timer;
+var totalSeconds;
 
 console.log(display)
 $(".score").html("Score: " + display);
 
-// var time = (Math.floor(Math.random() * 1000));
-var time = 500;
-console.log(time)
+// var gameTime = (Math.floor(Math.random() * 1000));
+var gameTime = 500;
+console.log(gameTime)
 
-setInterval(swap, time)
+setInterval(swap, gameTime)
 var pick =0 ;
 
 var random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
@@ -24,24 +26,20 @@ function swap ()
 	if(random.hasClass("active"))
 		{
 		console.log("has class active")
-		random.removeClass("active").animate
-			({
-				opacity:1
-			})
-		time = (Math.floor(Math.random() * 500));
-		console.log(time)
+		random.removeClass("active")
+			
+		gameTime = (Math.floor(Math.random() * 500));
+		console.log(gameTime)
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
 
 
 	} else {
-		random.addClass("active").animate
-			({
-				opacity:1
-			});
+		random.addClass("active")
+			;
 		console.log("running swap()")
-		time = (Math.floor(Math.random() * 500));
-		console.log(time)
+		gameTime = (Math.floor(Math.random() * 500));
+		console.log(gameTime)
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
 	}
@@ -50,9 +48,7 @@ function swap ()
 
 $("body").on("click", ".active", function(){
 	console.log("Yay, click");
-	$(this).removeClass("active").animate({
-		opacity:1
-	})
+	$(this).removeClass("active")
 	$(this).addClass("picX")
 	display++;
 	$(".score").html("Score: " + display);
@@ -62,5 +58,28 @@ $("body").on("click", ".active", function(){
 $("body").on("click", ".active", function(){
 	console.log("YOU LOSE");
 });
+
+
+// window.setTimeout("Tick()", 1000);
+// function Tick() {
+// 	function Tick()
+// 	window.setTimeout("Tick()",1000);
+// }
+
+// function createTimer(timerID,Time) {
+// 	Timer = document.getElementById(timerID);
+// 	totalSeconds = timing;
+// 	updateTimer()
+// 	window.setTimeout("Tick()",1000);
+// }
+// function Tick() {
+// 	totalSeconds -=1;
+// 	updateTimer()
+// 	window.setTimeout("Tick()", 1000);
+// }
+
+// function updateTimer() {
+// 	fullTimer.innerHTML = totalSeconds;
+// }
 
 

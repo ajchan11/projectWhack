@@ -8,8 +8,8 @@ body {
 }
 
 .container {
-	width:450px;
-	margin: 0 auto;
+	width:950px;
+	margin: 100px auto;
 }
 
 
@@ -18,7 +18,7 @@ body {
 	width:100px;
 	display:inline-block;
 	border-radius: 10px;
-	background-image: url(x.png);
+	background-image: url(blank100.png);
 
 
 	
@@ -43,6 +43,7 @@ body {
 	display:inline-block;
 	border-radius: 10px;
 	background-image: url(kim.png);
-	opacity: 0;
+	transition-timing-function: ease;
+    transition-duration: 0.5s;
 
 }
