@@ -16,19 +16,27 @@ body {
 	display:inline-block;
 	border-radius: 10px;
 	background-image: url(x.png);
+
+
+	
 }
 
-/*.picO {
+.timer {
 	height:100px;
-	width:100px;
-	display:inline-block;
-	border-radius: 10px;
-	background-image: url(o.png);
+	width:200px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: orange;
+	border-top: 20px;
+	float: left;
+	display: inline-block;
 }
-*/
+
 .score {
 	height:100px;
 	width:200px;
+	border-radius: 20px;
+	text-align: center;
 	background-color: blue;
 	border-top: 20px;
 	float: right;
