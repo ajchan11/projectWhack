@@ -6,7 +6,7 @@ console.log(display)
 $(".score").html("Score: " + display);
 
 // var time = (Math.floor(Math.random() * 1000));
-var time = 100;
+var time = 500;
 console.log(time)
 
 setInterval(swap, time)
