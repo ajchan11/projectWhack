@@ -64,7 +64,6 @@ body {
 	width:100px;
 	display:inline-block;
 	background-image: url(kim.png);
-    transition-duration: 0.5s;
 }
 
 .sad {
@@ -72,7 +71,6 @@ body {
 	width:100px;
 	display:inline-block;
 	background-image: url(sad.png);
-    transition-duration: 0.5s;
 }
 
 .dalai {
@@ -80,7 +78,6 @@ body {
 	width:100px;
 	display:inline-block;
 	background-image: url(dalai.png);
-    transition-duration: 0.5s;
 }
 
 .clicky {

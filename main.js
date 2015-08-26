@@ -54,16 +54,16 @@ function startGame() {
 
 function swap () 
 	{
-	if(random.hasClass("active"))
+	if(random.hasClass("active animated slideInUp"))
 		{
 		console.log("has class active")
-		random.removeClass("active")
+		random.removeClass("active animated slideInUp")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
 
 
 	} else {
-		random.addClass("active");
+		random.addClass("active animated slideInUp");
 		console.log("running swap()")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
@@ -72,16 +72,16 @@ function swap ()
 
 function sads () 
 	{
-	if(random.hasClass("sad"))
+	if(random.hasClass("sad animated slideInUp"))
 		{
 		console.log("has class active")
-		random.removeClass("sad")
+		random.removeClass("sad animated slideInUp")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
 
 
 	} else {
-		random.addClass("sad");
+		random.addClass("sad animated slideInUp");
 		console.log("running swap()")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
@@ -90,16 +90,16 @@ function sads ()
 
 function dals () 
 	{
-	if(random.hasClass("dalai"))
+	if(random.hasClass("dalai animated slideInUp"))
 		{
 		console.log("has class active")
-		random.removeClass("dalai")
+		random.removeClass("dalai animated slideInUp")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
 
 
 	} else {
-		random.addClass("dalai");
+		random.addClass("dalai animated slideInUp");
 		console.log("running swap()")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
