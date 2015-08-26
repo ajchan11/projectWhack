@@ -1,0 +1,95 @@
+body {
+	text-align: center;
+	font-size: 20px;
+	font-family: sans-serif;
+	line-height: 75px;
+}
+
+.active {
+	height:50%;
+	width:50%;
+	transition: 1s ease-in;
+}
+
+.left {
+	width:120px;
+	float: left;
+}
+
+.right {
+	width:120px;
+	float: right;
+
+}
+
+.rightrock {
+	height:100px;
+	width:100px;
+	margin:3px;
+	background: blue;
+	
+}
+
+.rightpaper {
+	height:100px;
+	width:100px;
+	background: blue;
+	margin:3px;
+}
+
+.rightscissors {
+	height:100px;
+	width:100px;
+	background: blue;
+	margin:3px;
+}
+
+.rightlizard {
+	height:100px;
+	width:100px;
+	background: blue;
+	margin:3px;
+}
+
+.rightspock {
+	height:100px;
+	width:100px;
+	background: blue;
+	margin:3px;
+}
+
+.leftrock {
+	height:100px;
+	width:100px;
+	margin:3px;
+	background: red;
+
+}
+
+.leftpaper {
+	height:100px;
+	width:100px;
+	background: red;
+	margin:3px;
+}
+
+.leftscissors {
+	height:100px;
+	width:100px;
+	background: red;
+	margin:3px;
+}
+
+.leftlizard {
+	height:100px;
+	width:100px;
+	background: red;
+	margin:3px;
+}
+
+.leftspock {
+	height:100px;
+	width:100px;
+	background: red;
+	margin:3px;
+}
