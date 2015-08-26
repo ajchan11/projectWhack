@@ -5,9 +5,16 @@ body {
 	line-height: 75px;
 }
 
+section {
+	position: relative;
+	height:700px;
+	width:800px;
+}
+
 .active {
-	height:50%;
-	width:50%;
+	height:350px;
+	width:400px;
+	background:red;
 	transition: 1s ease-in;
 }
 
