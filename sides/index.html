@@ -2,26 +2,29 @@
 <head> <link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="animate.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.min.css">
+	<script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
 	<title> Rock Paper Scissors Lizard Spock</title>
 </head>
-<body>
-	<section>
+<body class="radial"> 
+	<div id="dialog" title="Choose Your Champion">
+  <p>Choose your champion, this part is very very important for the battle.</p>
+</div>
 	<div class="left">
-		<div class="leftrock animated slideInUp">Rock</div>
-		<div class="leftpaper animated slideInUp">Paper</div>
-		<div class="leftscissors animated slideInUp">Scissors</div>
-		<div class="leftlizard animated slideInUp">Lizard</div>
-		<div class="leftspock animated slideInUp">Spock</div>
+		<div class="leftrock slideInLeft"></div>
+		<div class="leftpaper bounce"></div>
+		<div class="leftscissors shake"></div>
+		<div class="leftlizard tada"></div>
+		<div class="leftspock zoomIn"></div>
 	</div>
 	<div class="right">
-		<div class="rightrock">Rock</div>
-		<div class="rightpaper">Paper</div>
-		<div class="rightscissors">Scissors</div>
-		<div class="rightlizard">Lizard</div>
-		<div class="rightspock">Spock</div>
+		<div class="rightrock"></div>
+		<div class="rightpaper"></div>
+		<div class="rightscissors"></div>
+		<div class="rightlizard"></div>
+		<div class="rightspock"></div>
 	</div>
-	</section>
-
 
 <script type="text/javascript" src="main.js"></script>
 </body>

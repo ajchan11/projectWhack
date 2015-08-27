@@ -4,6 +4,11 @@ var leftpaper = $(".leftpaper")
 var leftlizard = $(".leftlizard")
 var leftspock = $(".leftspock")
 
+ $(function() {
+    $( "#dialog" ).dialog();
+  });
+
+
 $("body").on("click", ".leftscissors", function()
 {
     var player= "scissors"

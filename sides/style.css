@@ -1,129 +1,82 @@
 body {
-	text-align: center;
-	font-size: 20px;
-	font-family: sans-serif;
-	line-height: 75px;
-}
-
-section {
-	position: relative;
-	height:700px;
-	width:800px;
+	background-image:url(background.jpg);
+	background-position: center;
+	font-family: Arnoldboecklin, fantasy;
 }
 
 .active {
-	height:350px;
-	width:400px;
-	background:red;
-	transition: 1s ease-in;
+	animation:
+	nudge 5s linear infinite;
 }
 
 .left {
-	width:120px;
+	width:160px;
 	float: left;
 }
 
 .right {
-	width:120px;
+	width:160px;
 	float: right;
 
 }
 
 .rightrock {
-	height:100px;
-	width:100px;
-	margin:3px;
-	background: blue;
-	
+	background-image:url(rock.png);
+	height: 150px;
+	width: 150px;
 }
 
 .rightpaper {
-	height:100px;
-	width:100px;
-	background: blue;
-	margin:3px;
+	background-image:url(paperR.png);
+	height: 150px;
+	width: 150px;
 }
 
 .rightscissors {
-	height:100px;
-	width:100px;
-	background: blue;
-	margin:3px;
+	background-image:url(scissors.png);
+	height: 150px;
+	width: 150px;
 }
 
 .rightlizard {
-	height:100px;
-	width:100px;
-	background: blue;
-	margin:3px;
+	height: 150px;
+	width: 150px;	
+	background-image:url(lizardL.png);
 }
 
 .rightspock {
-	height:100px;
-	width:100px;
-	background: blue;
-	margin:3px;
+	height: 150px;
+	width: 150px;
+	background-image:url(spockR.png);
 }
 
 .leftrock {
-	height:100px;
-	width:100px;
-	margin:3px;
-	background: red;
-
+	height: 150px;
+	width: 150px;
+	background-image:url(rockL.png);
 }
 
 .leftpaper {
-	height:100px;
-	width:100px;
-	background: red;
-	margin:3px;
+	height: 150px;
+	width: 150px;
+	background-image:url(paper.png);
 }
 
 .leftscissors {
-	height:100px;
-	width:100px;
-	background: red;
-	margin:3px;
+	height: 150px;
+	width: 150px;
+	background-image:url(scissors.png);
 }
 
 .leftlizard {
-	height:100px;
-	width:100px;
-	background: red;
-	margin:3px;
+	height: 150px;
+	width: 150px;
+	background-image:url(lizardR.png);
 }
 
 .leftspock {
-	height:100px;
-	width:100px;
-	background: red;
-	margin:3px;
+	height: 150px;
+	width: 150px;
+	background-image:url(spockL.png);
 }
 
-.bounce {
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-transform-origin: center bottom;
-  transform-origin: center bottom;
-}
-
-@-webkit-keyframes flash {
-  from, 50%, 100% {
-    opacity: 1;
-  }
-
-  25%, 75% {
-    opacity: 0;
-  }
-}
-
-@keyframes flash {
-  from, 50%, 100% {
-    opacity: 1;
-  }
-
-  25%, 75% {
-    opacity: 0;
-  }
-}
