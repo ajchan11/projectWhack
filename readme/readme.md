@@ -34,4 +34,9 @@ Objective: Whack as many dictators as quickly as possible within the 30 second t
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/easy.png)
 
+8) The function compare is called at the end of each game. The [0] of highScore is compared to [1]. If [0] < [1], the [0] is spliced out and the high score is replaced with the new [0]. If not, the [1] is popped off. 
+
+![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/compare.png)
+
+
 # Rinse and Repeat!
