@@ -1,5 +1,6 @@
 var boxes = $(".picX");
 var active = $(".active");
+var blank = $(".blank")
 var display= 0;
 var s=30
 var q
@@ -46,8 +47,9 @@ $(".hard").on("click", function(){
 
 function startGame() {
 	swap()
-	sads()
 	dals()
+	sads()
+	clears()
 }
 
 
@@ -56,16 +58,14 @@ function swap ()
 	{
 	if(random.hasClass("active animated slideInUp"))
 		{
-		console.log("has class active")
-		random.removeClass("active animated slideInUp")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
-		console.log(random.hasClass("picX"))
-
+		random.removeClass("active animated slideInUp")
+		console.log("has class active, should clear")
 
 	} else {
-		random.addClass("active animated slideInUp");
 		console.log("running swap()")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
+		random.addClass("active animated slideInUp");
 		console.log(random.hasClass("picX"))
 		}
 	}
@@ -74,16 +74,14 @@ function sads ()
 	{
 	if(random.hasClass("sad animated slideInUp"))
 		{
-		console.log("has class active")
-		random.removeClass("sad animated slideInUp")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
-		console.log(random.hasClass("picX"))
-
+		random.removeClass("sad animated slideInUp")
+		console.log("why isn't this clearing")
 
 	} else {
+		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		random.addClass("sad animated slideInUp");
 		console.log("running swap()")
-		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
 		}
 	}
@@ -92,12 +90,9 @@ function dals ()
 	{
 	if(random.hasClass("dalai animated slideInUp"))
 		{
-		console.log("has class active")
-		random.removeClass("dalai animated slideInUp")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
-
-
+		random.removeClass("dalai animated slideInUp")
 	} else {
 		random.addClass("dalai animated slideInUp");
 		console.log("running swap()")
@@ -107,6 +102,20 @@ function dals ()
 	}
 
 
+function clears () 
+	{
+	if(random.hasClass("dalai animated slideInUp"))
+		{
+		console.log("this should clear")
+		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
+		random.removeClass("dalai animated slideInUp")
+	} else {
+		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
+		random.removeClass("dalai animated slideInUp")
+		console.log("this should also clear")
+		}
+	}
+	
 
 
 $("body").on("click", function(){
@@ -123,7 +132,7 @@ $("body").on("click", ".active", function(){
 	console.log("Yay, click");
 	$(this).removeClass("active")
 	$(this).addClass("picX")
-	display++;
+	display=display+3;
 	$(".score").html("Score: " + display);
 	console.log(display)
 });
