@@ -1,10 +1,11 @@
-var boxes = $(".picX");
 var active = $(".active");
+var boxes = $(".picX")
 var blank = $(".blank")
 var display= 0;
 var s=30
 var q
 var interval;
+var active = $(".active");
 var random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 var gameLevel;
 var easy;
@@ -58,14 +59,14 @@ function swap ()
 	{
 	if(random.hasClass("active animated slideInUp"))
 		{
-		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		random.removeClass("active animated slideInUp")
+		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log("has class active, should clear")
 
 	} else {
 		console.log("running swap()")
-		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		random.addClass("active animated slideInUp");
+		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
 		}
 	}
@@ -74,11 +75,12 @@ function sads ()
 	{
 	if(random.hasClass("sad animated slideInUp"))
 		{
+		random.removeClass("sad animated slideInUp")	
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
-		random.removeClass("sad animated slideInUp")
 		console.log("why isn't this clearing")
 
 	} else {
+		random.addClass("sad animated slideInUp");
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		random.addClass("sad animated slideInUp");
 		console.log("running swap()")
@@ -90,9 +92,9 @@ function dals ()
 	{
 	if(random.hasClass("dalai animated slideInUp"))
 		{
+		random.removeClass("dalai animated slideInUp")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
-		random.removeClass("dalai animated slideInUp")
 	} else {
 		random.addClass("dalai animated slideInUp");
 		console.log("running swap()")
@@ -107,11 +109,11 @@ function clears ()
 	if(random.hasClass("dalai animated slideInUp"))
 		{
 		console.log("this should clear")
-		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		random.removeClass("dalai animated slideInUp")
+		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 	} else {
-		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		random.removeClass("dalai animated slideInUp")
+		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log("this should also clear")
 		}
 	}
