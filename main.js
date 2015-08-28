@@ -1,20 +1,16 @@
 var active = $(".active");
-var boxes = $(".picX")
-var blank = $(".blank")
+var boxes = $(".picX");
+var blank = $(".blank");
 var display= 0;
-var s=30
-var q
+var s=30;
+var q;
 var interval;
 var random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
-var gameLevel;
-var easy;
-var medium;
-var hard;
 var highScore = [0]
+
 console.log(random.hasClass("picX"))
-
-
 console.log(display)
+
 $(".score").html("Score: " + display);
 
 $(".easy").on("click", function(){
@@ -119,17 +115,20 @@ function clears ()
 	
 
 
-$("body").on("click", function(){
+$("body").on("click", function()
+	{
 	console.log("Yay, click");
 	var _this = $(this);
 	_this.addClass("clicky");
-	setTimeout( function () {
+	setTimeout( function () 
+		{
 		_this.removeClass('clicky')
-	}, 100);
+		}, 100);
 })
 
 
-$("body").on("click", ".active", function(){
+$("body").on("click", ".active", function()
+	{
 	console.log("Yay, click");
 	$(this).removeClass("active")
 	$(this).addClass("picX")
@@ -138,7 +137,8 @@ $("body").on("click", ".active", function(){
 	console.log(display)
 });
 
-$("body").on("click", ".sad", function(){
+$("body").on("click", ".sad", function()
+	{
 	console.log("Yay, click");
 	$(this).removeClass("sad")
 	$(this).addClass("picX")
@@ -147,7 +147,8 @@ $("body").on("click", ".sad", function(){
 	console.log(display)
 });
 
-$("body").on("click", ".dalai", function(){
+$("body").on("click", ".dalai", function()
+	{
 	console.log("Yay, click");
 	$(this).removeClass("dalai")
 	$(this).addClass("picX")
@@ -158,13 +159,13 @@ $("body").on("click", ".dalai", function(){
 
 function gameCount()
 	{
-		$(".timer").html(s+" seconds remaining")
-		s=s-1
-		q=setTimeout("gameCount()", 1000)
+	$(".timer").html(s+" seconds remaining")
+	s=s-1
+	q=setTimeout("gameCount()", 1000)
 	if (s<1)
-	{
+		{
 		gameStop();
-	}
+		}
 }
 
 function gameStop()
