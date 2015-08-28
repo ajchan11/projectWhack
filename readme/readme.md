@@ -2,15 +2,15 @@
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/intro.png)
 
-1. Name of the game: Whack a Mole
+Name of the game: Whack a Mole
 
-2. Objective: Whack as many dictators as quickly as possible within the 30 second time limit. Minus 10 points for hitting the Dalai Lama!
+Objective: Whack as many dictators as quickly as possible within the 30 second time limit. Minus 10 points for hitting the Dalai Lama!
 
-3. Began constructing the game with a simple layout of 8 x 3 squares
+1. Began constructing the game with a simple layout of 8 x 3 squares and assigned each box to an array.
 
-![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/outline.png)
+![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/outline2.png)
 
-4. Used a random number generator that cycles through the array of squares, randomly choosing one. The chosen box is given an additional class name. 
+2. Used a random number generator that cycles through the array of squares, randomly choosing one. The chosen box is given an additional class name. 
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/active.png)
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/swap.png)
