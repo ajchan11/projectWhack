@@ -5,7 +5,6 @@ var display= 0;
 var s=30
 var q
 var interval;
-var active = $(".active");
 var random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 var gameLevel;
 var easy;
