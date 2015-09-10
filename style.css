@@ -4,17 +4,17 @@ body {
 	font-style: serif;
 	color:white;
 	background-color:#5590cc;
-	cursor: url(noClick.png), default;
+	cursor: url(assets/images/noClick.png), default;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	background-position: center;
-	background-image: url(map.png);
+	background-image: url(assets/images/map.png);
 	background-attachment: fixed;               
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .gameOver {
-	background-image: url(gameOver.png);
+	background-image: url(assets/images/gameOver.png);
 }
 
 .container {
@@ -28,7 +28,7 @@ body {
 	width:100px;
 	padding:1px;
 	display:inline-block;
-	background-image: url(blank100.png);
+	background-image: url(assets/images/blank100.png);
 }
 
 .blank {
@@ -36,7 +36,7 @@ body {
 	width:100px;
 	padding:1px;
 	display:inline-block;
-	background-image: url(blank100.png);
+	background-image: url(assets/images/blank100.png);
 }
 
 .timer {
@@ -71,23 +71,23 @@ body {
 	height:100px;
 	width:100px;
 	display:inline-block;
-	background-image: url(kim.png);
+	background-image: url(assets/images/kim.png);
 }
 
 .sad {
 	height:100px;
 	width:100px;
 	display:inline-block;
-	background-image: url(sad.png);
+	background-image: url(assets/images/sad.png);
 }
 
 .dalai {
 	height:100px;
 	width:100px;
 	display:inline-block;
-	background-image: url(dalai.png);
+	background-image: url(assets/images/dalai.png);
 }
 
 .clicky {
-	cursor: url(onClick.png), auto;
+	cursor: url(assets/images/onClick.png), auto;
 }

@@ -2,20 +2,20 @@ var active = $(".active");
 var boxes = $(".picX");
 var blank = $(".blank");
 var display= 0;
-var s=30;
-var q;
+var second=30;
+var timing;
 var interval;
 var random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
-var highScore = [0]
+var highScore = [0];
 
-console.log(random.hasClass("picX"))
-console.log(display)
+console.log(random.hasClass("picX"));
+console.log(display);
 
 $(".score").html("Score: " + display);
 
 $(".easy").on("click", function(){
 	$("body").removeClass("gameOver")
-	s=30
+	second=30
 	display =0
 	interval = setInterval(startGame,1000)
 	gameCount()
@@ -24,7 +24,7 @@ $(".easy").on("click", function(){
 
 $(".medium").on("click", function(){
 	$("body").removeClass("gameOver")
-	s=30
+	second=30
 	display=0
 	interval = setInterval(startGame,500);
 	gameCount()
@@ -33,7 +33,7 @@ $(".medium").on("click", function(){
 
 $(".hard").on("click", function(){
 	$("body").removeClass("gameOver")
-	s=30
+	second=30
 	display=0
 	interval = setInterval(startGame,50);
 	gameCount()
@@ -50,43 +50,38 @@ function startGame() {
 
 
 
-function swap () 
-	{
+function swap () {
 	if(random.hasClass("active animated slideInUp"))
-		{
+	{
 		random.removeClass("active animated slideInUp")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log("has class active, should clear")
-
 	} else {
 		console.log("running swap()")
 		random.addClass("active animated slideInUp");
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
-		}
 	}
+}
 
-function sads () 
-	{
+function sads () {
 	if(random.hasClass("sad animated slideInUp"))
-		{
+	{
 		random.removeClass("sad animated slideInUp")	
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log("why isn't this clearing")
-
 	} else {
 		random.addClass("sad animated slideInUp");
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		random.addClass("sad animated slideInUp");
 		console.log("running swap()")
 		console.log(random.hasClass("picX"))
-		}
 	}
+}
 
-function dals () 
-	{
+function dals () {
 	if(random.hasClass("dalai animated slideInUp"))
-		{
+	{
 		random.removeClass("dalai animated slideInUp")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
@@ -95,12 +90,11 @@ function dals ()
 		console.log("running swap()")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log(random.hasClass("picX"))
-		}
 	}
+}
 
 
-function clears () 
-	{
+function clears () {
 	if(random.hasClass("dalai animated slideInUp"))
 		{
 		console.log("this should clear")
@@ -110,25 +104,22 @@ function clears ()
 		random.removeClass("dalai animated slideInUp")
 		random = $(boxes.get(Math.floor(Math.random() * boxes.length)));
 		console.log("this should also clear")
-		}
 	}
+}
 	
 
 
-$("body").on("click", function()
-	{
+$("body").on("click", function() {
 	console.log("Yay, click");
 	var _this = $(this);
 	_this.addClass("clicky");
-	setTimeout( function () 
-		{
+	setTimeout( function () {
 		_this.removeClass('clicky')
 		}, 100);
-})
+});
 
 
-$("body").on("click", ".active", function()
-	{
+$("body").on("click", ".active", function() {
 	console.log("Yay, click");
 	$(this).removeClass("active")
 	$(this).addClass("picX")
@@ -137,8 +128,7 @@ $("body").on("click", ".active", function()
 	console.log(display)
 });
 
-$("body").on("click", ".sad", function()
-	{
+$("body").on("click", ".sad", function() {
 	console.log("Yay, click");
 	$(this).removeClass("sad")
 	$(this).addClass("picX")
@@ -147,8 +137,7 @@ $("body").on("click", ".sad", function()
 	console.log(display)
 });
 
-$("body").on("click", ".dalai", function()
-	{
+$("body").on("click", ".dalai", function() {
 	console.log("Yay, click");
 	$(this).removeClass("dalai")
 	$(this).addClass("picX")
@@ -157,21 +146,18 @@ $("body").on("click", ".dalai", function()
 	console.log(display)
 });
 
-function gameCount()
-	{
-	$(".timer").html(s+" seconds remaining")
-	s=s-1
-	q=setTimeout("gameCount()", 1000)
-	if (s<1)
-		{
+function gameCount() {
+	$(".timer").html(second+" seconds remaining")
+	second=second-1
+	timer=setTimeout("gameCount()", 1000)
+	if (second<1) {
 		gameStop();
-		}
-}
+	}
+};
 
-function gameStop()
-{
+function gameStop() {
 	console.log(interval);
-	clearTimeout(q)
+	clearTimeout(timing)
 	clearInterval(interval)
 	console.log("game over")
 	$("body").addClass("gameOver")
@@ -180,21 +166,20 @@ function gameStop()
 	$(".sad").removeClass("sad")
 	highScore.push(display)
 	compare()
-$(".timer").html("Time Has Finished")
-}
+	$(".timer").html("Time Has Finished")
+};
 
 function compare () {
-if (highScore[0] < highScore[1]) {
-	console.log ("new high score")
-	highScore.splice(0,1);
-	console.log(highScore)
-	$(".high").html("High Score: " + highScore[0]);
-}
-else {
-	console.log("you lose")
-	highScore.pop()
-	$(".high").html("High Score: " + highScore[0]);
-}}
+	if (highScore[0] < highScore[1]) {
+		console.log ("new high score")
+		highScore.splice(0,1);
+		console.log(highScore)
+		$(".high").html("High Score: " + highScore[0]);
+	} else {
+		console.log("you lose")
+		highScore.pop()
+		$(".high").html("High Score: " + highScore[0]);
+}};
 
 $(document).keypress(function(e) {
   if(e.which == 13) {
