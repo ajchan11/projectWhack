@@ -1,3 +1,6 @@
+#READ ME I AM YOU NEW HEADLINE!!
+
+
 # Project 1: Whack a Dictator!
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/intro.png)
@@ -10,7 +13,7 @@ Objective: Whack as many dictators as quickly as possible within the 30 second t
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/outline2.png)
 
-2) Used a random number generator that cycles through the number of squares, randomly choosing one. The chosen box is given a new variable "random". 
+2) Used a random number generator that cycles through the number of squares, randomly choosing one. The chosen box is given a new variable "random".
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/boxes.png)
 
@@ -18,7 +21,7 @@ Objective: Whack as many dictators as quickly as possible within the 30 second t
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/active.png)
 
-4) Created a function that had an if/else statement. If the random box has the class "active", the class "active" was removed and a new global random variable was assigned to random. Else, the class "active" was given to the random box and a new global random variable was assigned. 
+4) Created a function that had an if/else statement. If the random box has the class "active", the class "active" was removed and a new global random variable was assigned to random. Else, the class "active" was given to the random box and a new global random variable was assigned.
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/swap.png)
 
@@ -30,7 +33,7 @@ Objective: Whack as many dictators as quickly as possible within the 30 second t
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/stop.png)
 
-7) The game begins when a player clicks a mode. Each mode begins with removing the class "gameOver" from the body, the "s" is reset to 30. the "display" score is reset to 0 and the global interval variable is definied with the function "startGame" and the time frequency in which the function is constantly called. The function "gameCount" is called and the timer begins. 
+7) The game begins when a player clicks a mode. Each mode begins with removing the class "gameOver" from the body, the "s" is reset to 30. the "display" score is reset to 0 and the global interval variable is definied with the function "startGame" and the time frequency in which the function is constantly called. The function "gameCount" is called and the timer begins.
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/easy.png)
 
@@ -38,7 +41,7 @@ Objective: Whack as many dictators as quickly as possible within the 30 second t
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/point.png)
 
-9) The function compare is called at the end of each game. The [0] of highScore is compared to [1]. If [0] < [1], the [0] is spliced out and the high score is replaced as the new [0]. If not, the [1] is popped off. 
+9) The function compare is called at the end of each game. The [0] of highScore is compared to [1]. If [0] < [1], the [0] is spliced out and the high score is replaced as the new [0]. If not, the [1] is popped off.
 
 ![alt tag](https://github.com/ajchan11/projectOne/blob/master/readme/compare.png)
 
